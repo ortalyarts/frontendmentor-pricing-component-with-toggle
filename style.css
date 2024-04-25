@@ -1,0 +1,348 @@
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd, ul {
+  margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  /* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+img {
+  vertical-align: middle;
+}
+/* General STYLE */
+:root {
+
+--color1:rgb(74, 77, 96);
+--color2:rgb(110, 114, 142);
+--color3:rgb(109, 114, 222);
+--color4: rgb(208, 213, 246);
+--color5:rgb(247, 247, 254); 
+--color6:rgb(255,255,255);
+--color6a:rgba(255,255,255, 25%);
+--color7:rgba(151, 151, 151, 25%);
+
+--gradient1:linear-gradient(106deg, rgba(162,167,240,1) 0%, rgba(105,110,221,1) 100%);
+--gradient1a:linear-gradient(106deg, rgba(162,167,240,0.5) 0%, rgba(105,110,221,0.5) 100%);
+
+--border1: 1px solid var(--color7);
+--border2: 1px solid var(--color6a);
+
+--shadow1:0 1.563rem 1.563rem -0.625rem rgba(63,91,194,25%);
+--shadow2:0 1.563rem 1.563rem -0.625rem rgba(75,92,191544,75%);
+
+--sansserif: 'Montserrat', sans-serif;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Bold.woff2') format('woff2'),
+       url('./assets/fonts/Montserrat-Bold.woff') format('woff');
+  font-weight: 700;
+  font-display: swap; 
+}
+
+h1, h2, h3, ul {
+  padding:0;
+}
+.hide {
+  display:none;
+}
+.screen-reader-only {
+  position:absolute;
+  display:inline-block;
+  height:1px;
+  width:1px;
+  /* overflow: hidden; */
+  clip: rect(1px 1px 1px 1px); /* IE 7+ only support clip without commas */
+  clip: rect(1px, 1px, 1px, 1px); /* All other browsers */
+}
+
+
+.headingXL {
+  font-size: 4.5rem;
+  letter-spacing: -2px;
+  line-height:4rem;
+  font-weight:700;
+}
+.headingL {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height:3rem;
+}
+.headingM {
+  font-size: 1.25rem;
+  line-height:1.75rem;
+  font-weight: 700;
+}
+.headingS {
+  font-size: 1rem;
+  line-height:3rem;
+  font-weight: 700;
+}
+.headingXS {
+  font-size: 1.125rem;
+  line-height:1.563rem;
+  font-weight: 700;
+}
+.bodyM p, li{
+  font-size: 0.938rem;
+  line-height:1.75rem;
+  font-weight: 700;
+}
+body {
+  min-height:100vh;
+  position:relative;
+  text-rendering: optimizeSpeed;
+  text-align:left; 
+  font-family: var(--sansserif);
+  font-weight:700;
+  background-color: var(--color5);
+  background-image:url(./assets/images/bg-top.svg), url(./assets/images/bg-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right top , left bottom;
+  color:var(--color1);
+}
+.main-container {
+  max-width:24.438rem;
+  margin: 0 auto;
+  position:relative;
+  padding:0 1rem;
+}
+header, footer{
+  max-width:100%;
+  justify-self: stretch;
+  align-self: stretch;
+}
+.main-title-holder {
+  text-align: center;
+}
+.main-title-holder h1 {
+  color:var(--color2);
+}
+.switch-holder p[aria-hidden="true"]{
+  color:var(--color2);
+  opacity:.5;
+  font-size:0.938rem;
+}
+/* Switch */
+.switch-holder {
+  margin:2.2rem auto 0 auto;
+  display:flex;
+  gap:1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+/* Toggle switch styling */
+ 
+label.switch-container {
+  display: block;
+  width:3.5rem;
+  height:2rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: var(--gradient1);
+  border-radius: 1rem;
+  align-self: end;
+  justify-self: end;
+  transition: opacity 0.2s;
+}
+/* Hide the browser's default checkbox */
+label.switch-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+label.switch-container::before {
+  content: "";
+  display:block;
+  width:1.5rem;
+  height:1.5rem;
+  background:white;
+  border-radius: 50%;
+  margin:0.25rem 0.25rem 0.25rem 1.75rem; 
+  transition: 0.2s;
+}
+label.switch-container:has(input:checked)::before{
+  margin:0.25rem 1.75rem 0.25rem 0.25rem; 
+}
+.switch-container:hover, .switch-container:has(input:focus-visible) {
+  opacity: .5;
+}
+/* End Switch */
+.btn {
+  height:2.75rem;
+  width:100%;
+  border-radius: 0.375rem;
+  border:1px solid var(--color6);
+  outline: none;
+  /* padding:1.1rem 2.563rem; */
+  color:var(--color6);
+  font-size: 0.813rem;
+  letter-spacing: 1.39px;
+  font-weight:700;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition:background 0.5s;
+  cursor:pointer;
+  background:var(--gradient1);
+  display:inline-block;
+}
+.btn:hover, .btn:focus-visible {
+  background:none;
+  border:1px solid var(--color3);
+  color:var(--color3);
+}
+.btn-white {
+  background:var(--color6);
+  color:var(--color3);
+}
+.btn-white:hover, .btn-white:focus-visible {
+  color:var(--color6);
+  border:1px solid var(--color6);
+}
+
+.pricing {
+  margin-top:4rem;
+  }
+  .pricing-title{
+  max-width:33.75rem;
+  margin:auto;
+  }
+  .pricing-title h2, .pricing-title p {
+  text-align: center;
+  }
+  .pricing-title p {
+  margin-top: 1.5rem;
+  }
+  ul.price-options-holder {
+    display:grid;
+    gap:2rem;
+    align-items: center;
+    margin-top:4rem;
+    list-style-type: none;
+    text-align:center;
+  }
+  ul.features{
+    list-style-type: none;
+    display:grid;
+    border-top:var(--border1);
+  }
+  ul.features li{
+    border-bottom: var(--border1);
+    padding:0.75rem 0;
+  }
+  .price-option {
+  border-radius: 0.625rem;
+  background: var(--color6);
+  padding:1.9rem 1.9rem;
+  color:var(--color2);
+  }
+
+  .price-option .price-option h2 {
+    margin-bottom:0.5rem;
+  }
+
+  .price {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:1.7rem 0 2.25rem 0;
+  }
+  .dollar {
+    font-size:2.5rem;
+    margin-right:0.4rem;
+    color:var(--color1);
+  }
+  .price .headingXL {
+    color:var(--color1);
+  }
+  .price-option:nth-child(2){
+    background:var(--gradient1);
+    padding:3.4rem 1.9rem;
+    color:var(--color6);
+  }
+  .price-option:nth-child(2) h2, .price-option:nth-child(2) .price .headingXL, .price-option:nth-child(2) .dollar {
+    color:var(--color6);
+  }
+  .price-option:nth-child(2) ul.features{
+    border-top: var(--border2);
+  }
+  .price-option:nth-child(2) ul.features li{
+    border-bottom: var(--border2);
+  }
+  .price-option:nth-child(2) .btn {
+    background:var(--color6);
+    color:var(--color3);
+  }
+  .price-option:nth-child(2) .btn:hover, .price-option:nth-child(2) .btn:focus-visible {
+    background:none;
+    color:var(--color6);
+    border:1px solid var(--color6);
+  }
+  .price-option .btn{
+    margin-top:2rem;
+  }
+
+
+footer{
+  margin-top:3rem;
+}
+footer p{
+  text-align:center;
+  color: var(--color2);
+  font-size:0.8rem;
+  line-height: 1.5rem;
+}
+footer a{
+  text-align:center;
+  color: var(--color7b);
+  font-size:0.8rem;
+}
+
+
+@media screen and (min-width:65rem) {
+ 
+
+  .headingL {
+    font-size:2rem;
+  }
+  .headingM  {
+    font-size: 1.125rem;
+    line-height:1.75rem;
+  }
+  .headingS {
+    font-size: 1rem;
+    line-height:3rem;
+  }
+
+
+  .main-container{
+    max-width:67.625rem;
+  }
+  .pricing{
+    margin-top:4.2rem;
+  }
+  
+  ul.price-options-holder {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:0;
+  }
+
+}
