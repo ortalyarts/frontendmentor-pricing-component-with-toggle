@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [View code](https://github.com/ortalyarts/frontendmentor-pricing-component-with-toggle)
+- Live Site URL: [Preview Site](https://frontendmentor-pricing-component-with-toggle.vercel.app/)
 
 ### Built with
 
