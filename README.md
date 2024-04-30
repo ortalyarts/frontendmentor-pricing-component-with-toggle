@@ -47,6 +47,6 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- OrtalyARTS Portfolio Website - [@ortalyARTS.com](https://ortaly.com/)
+- Frontend Mentor - [@ortalyARTS](https://www.frontendmentor.io/profile/ortalyARTS)
+- Linkedin - [@ortalyARTS](www.linkedin.com/in/ortalyarts) 
